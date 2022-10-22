@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60366bf51810e242b6fd23a3b5f79b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightSwitch: {fileID: 0}
+  lightSwitch: {fileID: 1955584753}
   pointLight: {fileID: 1143863474}
 --- !u!1 &802152014
 GameObject:

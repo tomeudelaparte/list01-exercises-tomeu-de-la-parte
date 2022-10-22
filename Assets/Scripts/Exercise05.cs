@@ -7,17 +7,24 @@ public class Exercise05 : MonoBehaviour
     public GameObject capsulePrefab;
     public Vector3[] positions;
 
-    private int index = 0;
-
     void Update()
     {
+        // If the S key is pressed
         if (Input.GetKeyDown(KeyCode.S))
         {
-            if (index < positions.Length)
-            {
-                Instantiate(capsulePrefab, positions[index], capsulePrefab.transform.rotation);
+            // Search and store all capsules with an especified tag in an array.
+            GameObject[] capsulesInGame = GameObject.FindGameObjectsWithTag("Capsule");
 
-                index++;
+            // Each existing capsule is deleted.
+            foreach (GameObject obj in capsulesInGame)
+            {
+                Destroy(obj);
+            }
+
+            // Instantiate a capsule at each position of the array.
+            foreach (Vector3 pos in positions)
+            {
+                Instantiate(capsulePrefab, pos, capsulePrefab.transform.rotation);
             }
         }
     }

@@ -10,9 +10,11 @@ public class Exercise06 : MonoBehaviour
 
     private void Start()
     {
+        // Gets the material from the renderer component.
         cylinderMat = cylinder.GetComponent<Renderer>().material;
     }
 
+    // According to the index from the dropdown, it assigns a color to the cylinder.
     public void ChangeCylinderColor(int index)
     {
         switch (index)

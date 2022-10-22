@@ -11,9 +11,11 @@ public class Exercise10 : MonoBehaviour
 
     private void Start()
     {
+        // Reset counter to zero.
         counter.text = score.ToString();
     }
 
+    // Adds +1 to the score and updates the text.
     public void AddPoint()
     {
         score++;

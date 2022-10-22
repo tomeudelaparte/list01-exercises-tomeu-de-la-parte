@@ -10,17 +10,22 @@ public class Exercise09 : MonoBehaviour
 
     private void Start()
     {
+        // Default state according to toggle value.
         SwitchLight(lightSwitch.isOn);
     }
 
+    // Turn the light on and off.
     public void SwitchLight(bool isOn)
     {
+        // If is ON
         if (isOn)
         {
+            // Enable the Point Light.
             pointLight.GetComponent<Light>().enabled = true;
         }
         else
         {
+            // Disable the Point Light.
             pointLight.GetComponent<Light>().enabled = false;
         }
     }
